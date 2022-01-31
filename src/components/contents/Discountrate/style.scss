@@ -1,0 +1,21 @@
+.discount-badge {
+  font-family: 'Spooqa Han Sans Neo', sans-serif;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background: url('//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png');
+  width: 24px;
+  height: 28px;
+  background-position: center center;
+  background-size: cover;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 25px;
+  color: white;
+  text-align: center;
+  padding-left: 1px;
+
+  span {
+    font-size: 8px;
+  }
+}
