@@ -1,0 +1,11 @@
+@import 'reset';
+
+$--product-border-normal: 0.5px solid #aaafb9;
+$--product-border-choice: 0.5px solid #fff;
+$--product-background-choice: linear-gradient(163.54deg, #ff659e 8.22%, #f56b30 94.1%);
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

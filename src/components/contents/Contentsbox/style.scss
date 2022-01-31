@@ -1,0 +1,30 @@
+@import 'styles/index.scss';
+.content-wrapper {
+  margin: 30px auto;
+}
+
+.product-main-img-container {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  .content-main-img {
+    width: 800px;
+  }
+}
+
+.product-list-wrapper {
+  margin: 0 auto;
+  height: 179px;
+  width: 800px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  @include flex-center;
+  .product-list {
+    @include flex-center;
+  }
+}
+
+.product-list {
+  width: 1000px;
+}
