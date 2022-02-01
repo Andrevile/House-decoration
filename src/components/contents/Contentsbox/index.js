@@ -24,9 +24,13 @@ function Contentsbox() {
   return (
     <div className="content-wrapper">
       <div className="product-main-img-container">
-        <img className="content-main-img" alt="컨텐츠" src={content}></img>
+        <img
+          className="content-main-img"
+          alt="컨텐츠"
+          src={content}
+          onClick={() => setActive(-1)}
+        ></img>
         {productList.map((product, idx) => {
-          console.log(product);
           return (
             <Infoglass
               key={idx}
