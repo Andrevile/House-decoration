@@ -1,0 +1,114 @@
+@import 'styles/index.scss';
+.infowindow-container {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #4a4a4a;
+  z-index: 1000;
+  width: 220px;
+  height: 86px;
+  border-radius: 7px;
+  font-size: 14px;
+  top: 28px;
+  left: -23px;
+  padding: 8px 0 8px 8px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.2);
+  &::before {
+    content: '';
+    top: -8px;
+    left: 34px;
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    background: url('https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png');
+    background-size: cover;
+  }
+
+  .infowindow-img {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+}
+
+.infowindow-information {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 2px;
+  overflow: hidden;
+
+  font-size: 14px;
+  .product-name {
+    color: #333c45;
+    font-size: 14px;
+    text-align: left;
+
+    text-overflow: ellipsis;
+  }
+  .product-price {
+    margin-top: 4px;
+    color: #181d1f;
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 4px;
+    }
+  }
+
+  .expected-price {
+    span {
+      margin-top: auto;
+      margin-bottom: auto;
+      color: #898f94;
+      font-size: 11px;
+      font-weight: 4px;
+    }
+  }
+
+  .discount-price {
+    span {
+      color: #ff585d;
+    }
+  }
+}
+
+.arrow-icon-container {
+  display: flex;
+  margin-top: auto;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.direction-left {
+  left: -160px;
+  &::before {
+    left: unset;
+    right: 38px;
+  }
+}
+
+.direction-bottom {
+  top: unset;
+  bottom: 52px;
+
+  &::before {
+    top: unset;
+    bottom: -8px;
+    transform: rotate(180deg);
+  }
+}

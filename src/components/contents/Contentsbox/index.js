@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import Productimg from 'components/contents/Productimg';
 import Infoglass from 'components/contents/Infoglass';
@@ -11,6 +11,7 @@ function Contentsbox() {
   const [content, setContent] = useState('');
   const [productList, setProductList] = useState([]);
   const [active, setActive] = useState(-1);
+  const mainImgRef = useRef();
 
   useEffect(() => {
     axios
@@ -24,15 +25,21 @@ function Contentsbox() {
   return (
     <div className="content-wrapper">
       <div className="product-main-img-container">
-        <img className="content-main-img" alt="컨텐츠" src={content}></img>
+        <img
+          ref={mainImgRef}
+          className="content-main-img"
+          alt="컨텐츠"
+          src={content}
+          onClick={() => setActive(-1)}
+        ></img>
         {productList.map((product, idx) => {
-          console.log(product);
           return (
             <Infoglass
               key={idx}
               product={product}
               active={active}
               setActive={setActive}
+              mainImg={mainImgRef}
             ></Infoglass>
           );
         })}
