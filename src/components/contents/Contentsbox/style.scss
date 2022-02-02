@@ -1,6 +1,7 @@
 @import 'styles/index.scss';
 .content-wrapper {
   margin: 30px auto;
+  user-select: none;
 }
 
 .product-main-img-container {
@@ -26,5 +27,9 @@
 }
 
 .product-list {
-  width: 1000px;
+  // width: 1000px;
+  transition-property: transform;
+
+  cursor: grab;
+  user-select: none;
 }
